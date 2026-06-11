@@ -1,0 +1,178 @@
+ecotech-ewaste/
+│
+├── index.html
+├── style.css
+├── script.js
+└── assets/
+    └── images/   (opcional para futuras imagens)
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTech - Lixo Eletrônico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>♻️ EcoTech</h1>
+  <p>Conscientização sobre o descarte correto de lixo eletrônico</p>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#problema">Problema</a>
+  <a href="#solucao">Solução</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<main>
+  <section id="sobre">
+    <h2>O que é lixo eletrônico?</h2>
+    <p>São equipamentos eletrônicos descartados, como celulares, computadores, TVs e baterias.</p>
+  </section>
+
+  <section id="problema">
+    <h2>O problema</h2>
+    <p>O descarte incorreto causa poluição do solo, da água e do ar, além de riscos à saúde.</p>
+  </section>
+
+  <section id="solucao">
+    <h2>Como ajudar?</h2>
+    <ul>
+      <li>Levar eletrônicos a pontos de coleta</li>
+      <li>Reutilizar ou doar equipamentos</li>
+      <li>Reciclar componentes</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu email" required>
+      <textarea placeholder="Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 EcoTech - Projeto de conscientização ambiental</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo do site */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #2ecc71;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Menu de navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #27ae60;
+}
+
+nav a {
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #1e8449;
+}
+
+/* Seções */
+main section {
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+main section h2 {
+  margin-bottom: 15px;
+  color: #2ecc71;
+}
+
+main section ul {
+  margin-left: 20px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  padding: 12px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #27ae60;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #2c3e50;
+  color: white;
+  margin-top: 20px;
+}
+// Evita que o form recarregue a página e mostra alerta
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Mensagem enviada! Obrigado por ajudar o meio ambiente ♻️");
+  this.reset();
+});
